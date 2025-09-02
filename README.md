@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Website for LD in comsoc
 
 
