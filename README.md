@@ -23,3 +23,4 @@ Create a new `.yml` file in the `papers/` directory with the following structure
 title: <Paper Title>
 ```
 and then run the updater script to fetch the metadata from arXiv and DBLP.
+# ld-comsoc
