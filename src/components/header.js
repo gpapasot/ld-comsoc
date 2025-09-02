@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
 
-const baseUrl = "https://sat-for-math.com";
+const baseUrl = "http://localhost:8000";
 const pages = [
   { name: "Paper List", href: `${baseUrl}/` },
   { name: "Further Material", href: `${baseUrl}/material` },
@@ -23,7 +23,7 @@ const Header = () => {
           component="div"
           sx={{ ml: 2, mr: 4, fontWeight: "bold" }}
         >
-          SAT for Mathematics
+Liquid Democracy in COMSOC
         </Typography>
         {pages.map((page) => (
           <Button

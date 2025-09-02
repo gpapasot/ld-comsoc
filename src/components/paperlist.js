@@ -17,6 +17,65 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 
+// -----------------------------
+// Label colors
+// -----------------------------
+const normalizeLabel = (label) => label.toLowerCase().replace(/\s+/g, "-");
+
+const LABEL_COLOR_MAP = {
+  "single-stage": "#0d2c91",
+  "multi-stage": "#0d2c91",
+  "multiple-delegation": "#123fc0",
+  "single-delegation": "#123fc0",
+  preferential: "#1a52e0",
+  epistemic: "#1a52e0",
+  static: "#2b6af1",
+  temporal: "#2b6af1",
+  strategic: "#3b7cff",
+  "non-strategic": "#3b7cff",
+  deterministic: "#5c8cff",
+  stochastic: "#5c8cff",
+  "restricted-delegation": "#7daaff",
+  "unrestricted-delegation": "#7daaff",
+  centralized: "#9bb8ff",
+  emergent: "#9bb8ff",
+  publications: "#4caf50", // green background for publications
+  arxiv: "#4caf50",        // used for border/font only
+};
+
+// -----------------------------
+// Chip
+// -----------------------------
+const labelChip = (label, deleteable, selLabels, setSelLabels, type = "label", url = null) => {
+  const isArxiv = type === "arxiv";
+  const isPublication = type === "publication";
+  const clickable = url != null;
+
+  return (
+    <Chip
+      size="small"
+      key={label}
+      label={label}
+      variant={isArxiv ? "outlined" : "filled"}
+      sx={{
+        bgcolor: isArxiv ? "#ffffff" : isPublication ? LABEL_COLOR_MAP["publications"] : LABEL_COLOR_MAP[normalizeLabel(label)],
+        color: isArxiv ? "#4caf50" : "white",
+        borderColor: isArxiv ? "#4caf50" : undefined,
+        cursor: clickable ? "pointer" : "default",
+      }}
+      onClick={() => clickable && window.open(url, "_blank", "noopener,noreferrer")}
+      onDelete={
+        deleteable && selLabels.includes(label)
+          ? () => setSelLabels(selLabels.filter((l) => l !== label))
+          : undefined
+      }
+    />
+  );
+};
+
+// -----------------------------
+// Styled components
+// -----------------------------
 const openInNewTab = (url) => {
   const newWindow = window.open(url, "_blank", "noopener,noreferrer");
   if (newWindow) newWindow.opener = null;
@@ -35,6 +94,9 @@ const TitleText = styled("div")`
   font-weight: bold;
 `;
 
+// -----------------------------
+// Constants
+// -----------------------------
 function minDateOfPaper(paper) {
   const fullDates = paper.publications
     .filter((pub) => pub.month !== undefined)
@@ -58,12 +120,8 @@ function minDateOfPaper(paper) {
 function stringCmp(a, b) {
   var nameA = a.toUpperCase();
   var nameB = b.toUpperCase();
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
   return 0;
 }
 
@@ -71,96 +129,81 @@ const SORT_YEAR_TOP_DOWN = "Newest first";
 const SORT_YEAR_BOTTOM_UP = "Oldest first";
 const sortOptions = [SORT_YEAR_BOTTOM_UP, SORT_YEAR_TOP_DOWN];
 
-const TYPE_LABELS = [
-  // "dynamic / data structure",
-  // "online",
-  // "running time",
-  // "approximation",
-  // "streaming",
-  // "game theory / mechanism design",
-  // "differential privacy",
-  // "survey",
-];
+const TYPE_LABELS = [];
 const PRIOR_LABEL = "prior/related work";
-let SPECIAL_LABELS = [...TYPE_LABELS];// [...TYPE_LABELS, PRIOR_LABEL];
+let SPECIAL_LABELS = [...TYPE_LABELS];
 
+// -----------------------------
+// Main component
+// -----------------------------
 const PaperList = ({ data }) => {
   // preprocessing
   const allYears = data.flatMap((paper) =>
     paper.publications.flatMap((pub) => pub.year)
   );
-  let distinctYears = [...new Set(allYears)];
-  distinctYears.sort();
+  let distinctYears = [...new Set(allYears)].sort();
+
   const allLabels = data.flatMap((paper) => (paper.labels ? paper.labels : []));
-  let distinctLabels = [...new Set(allLabels)];
-  distinctLabels.sort(stringCmp);
+  let distinctLabels = [...new Set(allLabels)].sort((a,b)=>{
+    // preserve desired order
+    const order = [
+      "single-stage","multi-stage",
+      "single-delegation","multiple-delegation",
+      "epistemic","preferential",
+      "static","temporal",
+      "strategic","non-strategic",
+      "deterministic","stochastic",
+      "restricted-delegation","unrestricted-delegation",
+      "centralized","emergent"
+    ];
+    return order.indexOf(normalizeLabel(a)) - order.indexOf(normalizeLabel(b));
+  });
   distinctLabels = distinctLabels.filter((el) => !SPECIAL_LABELS.includes(el));
 
-  // component state definition
+  // state
   const [yearsIdx, setYearsIdx] = React.useState([0, distinctYears.length - 1]);
   const [sort, setSort] = React.useState(SORT_YEAR_TOP_DOWN);
   const [selLabels, setSelLabels] = React.useState([]);
 
-  // helper functions
-  const labelColor = (label) => {
-    if (TYPE_LABELS.includes(label)) {
-      return "typeLabels";
-    } else if (label === PRIOR_LABEL) {
-      return "default";
-    } else {
-      return "labels";
-    }
-  };
-
-  const labelChip = (label, deleteable) => (
-    <Chip
-      size="small"
-      key={label}
-      label={label}
-      variant={
-        (deleteable && selLabels.includes(label)) || label === PRIOR_LABEL
-          ? "outlined"
-          : "filled"
-      }
-      color={labelColor(label)}
-      onClick={() => setSelLabels([label, ...selLabels])}
-      onDelete={
-        deleteable && selLabels.includes(label)
-          ? () => {
-              setSelLabels(selLabels.filter((l) => l !== label));
-            }
-          : undefined
-      }
-    />
-  );
-
+  // build paper chips
   const paperChips = (paper) => {
     const labels = "labels" in paper ? paper.labels : [];
-    labels.sort(stringCmp);
-    let pubs = paper.publications;
-    pubs.sort((a, b) => stringCmp(a.name, b.name));
-    let chips = paper.publications.map((pub) => {
-      let name = "displayName" in pub ? pub.displayName : pub.name;
-      let text = name + " '" + pub.year.toString().slice(-2);
-      return (
-        <Chip
-          size="small"
-          label={text}
-          key={text}
-          variant={"arXiv" === name ? "filled" : "filled"}
-          color={"arXiv" === name ?  "typeLabels" :  "pubLabels" }
-          onClick={() => ("url" in pub ? openInNewTab(pub.url) : {})}
-        />
+    labels.sort((a,b)=>{
+      const order = [
+        "single-stage","multi-stage",
+        "single-delegation","multiple-delegation",
+        "epistemic","preferential",
+        "static","temporal",
+        "strategic","non-strategic",
+        "deterministic","stochastic",
+        "restricted-delegation","unrestricted-delegation",
+        "centralized","emergent"
+      ];
+      return order.indexOf(normalizeLabel(a)) - order.indexOf(normalizeLabel(b));
+    });
+
+    let chips = [];
+
+    // publications first
+    paper.publications.forEach((pub) => {
+      const name = "displayName" in pub ? pub.displayName : pub.name;
+      const text = name + " '" + pub.year.toString().slice(-2);
+      const type = name.toLowerCase() === "arxiv" ? "arxiv" : "publication";
+      chips.push(
+        labelChip(text, false, selLabels, setSelLabels, type, pub.url)
       );
     });
 
-    chips = chips.concat(labels.map((label) => labelChip(label, false)));
+    // then labels (blue)
+    chips = chips.concat(
+      labels.map((label) => labelChip(label, false, selLabels, setSelLabels))
+    );
 
     return chips;
   };
 
-  const buildListItems = (data) => {
-    return data.map((paper, i) => (
+  const buildListItems = (data) =>
+    data.map((paper, i) => (
       <ListItem key={i}>
         <ListItemText
           primary={
@@ -179,12 +222,10 @@ const PaperList = ({ data }) => {
         />
       </ListItem>
     ));
-  };
 
   const selTypeLabels = selLabels.filter((l) => TYPE_LABELS.includes(l));
   const selNonTypeLabels = selLabels.filter((l) => !TYPE_LABELS.includes(l));
 
-  // data preparation
   const filteredData = data
     .filter((p) =>
       p.publications.some(
@@ -200,35 +241,24 @@ const PaperList = ({ data }) => {
         (selNonTypeLabels.length === 0 ||
           p.labels.some((l) => selNonTypeLabels.includes(l)))
     );
-  const sortedData = filteredData.sort(function (p1, p2) {
-    if (sort === SORT_YEAR_TOP_DOWN) {
-      return minDateOfPaper(p2) - minDateOfPaper(p1);
-    } else {
-      return minDateOfPaper(p1) - minDateOfPaper(p2);
-    }
-  });
-  const items = buildListItems(sortedData);
-  const marks = Array.from(new Array(distinctYears.length), (x, i) => i).map(
-    (yearIdx) => ({
-      value: yearIdx,
-      label: "'" + distinctYears[yearIdx].toString().slice(-2),
-    })
+
+  const sortedData = filteredData.sort((p1, p2) =>
+    sort === SORT_YEAR_TOP_DOWN
+      ? minDateOfPaper(p2) - minDateOfPaper(p1)
+      : minDateOfPaper(p1) - minDateOfPaper(p2)
   );
+
+  const items = buildListItems(sortedData);
+
+  const marks = distinctYears.map((y, i) => ({
+    value: i,
+    label: "'" + y.toString().slice(-2),
+  }));
 
   return (
     <div>
-      <Stack
-        direction="row"
-        justifyContent={"space-between"}
-        alignItems="center"
-      >
-        <Stack
-          direction="row"
-          p={1}
-          spacing={2}
-          alignItems="center"
-          justifyContent={"flex-start"}
-        >
+      <Stack direction="row" justifyContent={"space-between"} alignItems="center">
+        <Stack direction="row" p={1} spacing={2} alignItems="center">
           <Box sx={{ width: 650, pr: 2 }}>
             <Slider
               value={yearsIdx}
@@ -255,11 +285,7 @@ const PaperList = ({ data }) => {
           <Typography>{items.length} papers</Typography>
         </Stack>
         {selLabels.length > 0 && (
-          <Button
-            variant="contained"
-            color="error"
-            onClick={() => setSelLabels([])}
-          >
+          <Button variant="contained" color="error" onClick={() => setSelLabels([])}>
             Reset
           </Button>
         )}
@@ -267,24 +293,15 @@ const PaperList = ({ data }) => {
       <Divider />
       <Stack
         spacing={1}
-        direction="row" //{{ md: "column-reverse", lg: "row" }}
+        direction="row"
         alignItems="stretch"
         justifyContent={"space-between"}
       >
         <List dense="true">{items}</List>
         <Box sx={{ display: "flex" }}>
           <Divider orientation={"vertical"} flexItem />
-          <Stack
-            flexWrap={"wrap"}
-            width={200}
-            pl={1}
-            pt={1}
-            spacing={1}
-            direction="column" //"row", lg: "column" }}
-          >
-            {/* {SPECIAL_LABELS.map((l) => labelChip(l, true))}
-            <Divider orientation={"horizontal"} flexItem /> */}
-            {distinctLabels.map((l) => labelChip(l, true))}
+          <Stack flexWrap={"wrap"} width={200} pl={1} pt={1} spacing={1} direction="column">
+            {distinctLabels.map((l) => labelChip(l, true, selLabels, setSelLabels))}
           </Stack>
         </Box>
       </Stack>

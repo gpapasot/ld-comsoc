@@ -8,15 +8,16 @@ import Layout from "../components/layout";
 import data from "../../papers.json";
 
 const IndexPage = () => {
+  React.useEffect(() => {
+    document.title = "Liquid Democracy | COMSOC";
+  }, []);
+
   return (
-    <div>
-      <title>SAT4Math</title>
-      <ThemeProvider theme={theme}>
-        <Layout>
-          <PaperList data={data} />
-        </Layout>
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <PaperList data={data} />
+      </Layout>
+    </ThemeProvider>
   );
 };
 

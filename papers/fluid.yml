@@ -1,0 +1,20 @@
+title: The Fluid Mechanics of Liquid Democracy
+authors: Gölz, Kahng, Mackenzie, Procaccia
+labels:
+- single-stage
+- multiple-delegation
+- preferential
+- static
+- non-strategic	
+- deterministic	
+- unrestricted-delegation
+- centralized
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/1808.01906
+  year: 2018
+- name: TEAC
+  url: https://dl.acm.org/doi/pdf/10.1145/3485012
+  year: 2021
+- name: WINE
+  year: 2018

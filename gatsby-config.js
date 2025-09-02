@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: `/sat-for-math`,
   siteMetadata: {
-    title: `SAT4Math`,
+    title: `LD in COMSOC`,
     siteUrl: `https://sat4math.com`
   },
   plugins: [
