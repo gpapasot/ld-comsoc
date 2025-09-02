@@ -3,7 +3,7 @@ authors: Becker, D'Angelo, Delfaraz, Gilbert
 labels:
 - multi-stage
 - single-delegation
-- ground-truth
+- epistemic
 - static
 - non-strategic	
 - deterministic	
