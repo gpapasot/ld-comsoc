@@ -1,0 +1,18 @@
+title: Unveiling the truth in liquid democracy with misinformed voters
+authors: Becker, D'Angelo, Delfaraz, Gilbert
+labels:
+- multi-stage
+- single-delegation
+- ground-truth
+- static
+- non-strategic	
+- deterministic	
+- restricted-delegation
+- centralized
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2104.01828
+  year: 2021
+- name: ADT
+  url: research.rug.nl/files/202200570/2021_Book_AlgorithmicDecisionTheory.pdf#page=148
+  year: 2021
