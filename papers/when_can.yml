@@ -1,14 +1,16 @@
-title: Unveiling the truth in liquid democracy with misinformed voters
+title: Unveiling the Truth in Liquid Democracy with Misinformed Voters
 authors: Becker, D'Angelo, Delfaraz, Gilbert
 labels:
-- multi-stage
-- single-delegation
-- epistemic
-- static
-- non-strategic	
-- deterministic	
-- restricted-delegation
+- multi-stage 
+- epistemic 
+- single-proxy 
+- stochastic 
+- substitutive 
+- restricted 
+- non-strategic 
+- static 
 - centralized
+- cycles-intolerant
 publications:
 - name: arXiv
   url: https://arxiv.org/abs/2104.01828

@@ -1,0 +1,17 @@
+title: Pairwise Liquid Democracy
+authors: Brill, Talmon
+labels:
+- single-stage 
+- preferential 
+- single-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- emergent
+- cycles-intolerant
+publications:
+- name: IJCAI
+  url: https://www.ijcai.org/proceedings/2018/19
+  year: 2018

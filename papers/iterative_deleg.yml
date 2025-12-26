@@ -1,0 +1,20 @@
+title: Iterative Delegations in Liquid Democracy with Restricted Preferences
+authors: Escoffier, Gilbert, Pass-Lanneau
+labels:
+- single-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- restricted 
+- strategic 
+- dynamic 
+- emergent
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/1809.04362
+  year: 2019
+- name: AAAI
+  url: https://ojs.aaai.org/index.php/AAAI/article/view/5562
+  year: 2020

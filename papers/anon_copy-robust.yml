@@ -1,0 +1,20 @@
+title: "Anonymous and Copy-Robust Delegations for Liquid Democracy"
+authors: Utke, Schmidt-Kraepelin
+labels:
+- single-stage 
+- preferential 
+- multi-proxy 
+- stochastic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2307.01174
+  year: 2024
+- name: NeurIPS
+  url: https://neurips.cc/virtual/2023/poster/71136
+  year: 2023

@@ -1,0 +1,20 @@
+title: "Unravelling Expressive Delegations: Complexity and Normative Analysis"
+authors: Tyrovolas, Constantinescu, Elkind
+labels:
+- multi-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- complementary 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2312.11932
+  year: 2025
+- name: AAAI
+  url: https://ojs.aaai.org/index.php/AAAI/article/view/28853
+  year: 2024

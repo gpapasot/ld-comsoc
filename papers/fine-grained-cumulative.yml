@@ -1,0 +1,20 @@
+title: Fine-Grained Liquid Democracy for Cumulative Ballots
+authors: Köppe, Koutecký, Sornat, Talmon
+labels:
+- single-stage 
+- preferential 
+- single-proxy 
+- deterministic 
+- complementary 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2208.14441
+  year: 2022
+- name: AAMAS
+  url: https://dl.acm.org/doi/10.5555/3635637.3662958
+  year: 2024

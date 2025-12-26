@@ -9,7 +9,7 @@ const baseUrl = "http://localhost:8000";
 const pages = [
   { name: "Paper List", href: `${baseUrl}/` },
   { name: "Further Material", href: `${baseUrl}/material` },
-  { name: "How to Contribute", href: `${baseUrl}/contribute` },
+//  { name: "How to Contribute", href: `${baseUrl}/contribute` },
   { name: "About", href: `${baseUrl}/about` },
 ];
 
@@ -23,7 +23,7 @@ const Header = () => {
           component="div"
           sx={{ ml: 2, mr: 4, fontWeight: "bold" }}
         >
-Liquid Democracy in COMSOC
+Liquid Democracy in Social Choice 
         </Typography>
         {pages.map((page) => (
           <Button

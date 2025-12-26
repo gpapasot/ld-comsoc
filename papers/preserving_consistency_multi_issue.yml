@@ -1,0 +1,17 @@
+title: Preserving Consistency in Multi-Issue Liquid Democracy
+authors: Colley, Grandi
+labels:
+- single-stage
+- preferential
+- single-proxy
+- deterministic
+- substitutive
+- unconstrained
+- non-strategic
+- static
+- centralized
+- cycles-intolerant
+publications:
+- name: IJCAI
+  url: https://www.ijcai.org/proceedings/2022/29
+  year: 2022

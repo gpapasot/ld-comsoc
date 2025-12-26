@@ -1,0 +1,20 @@
+title: A Contribution to the Defense of Liquid Democracy
+authors: Butterworth, Booth
+labels:
+- multi-stage 
+- epistemic 
+- single-proxy 
+- stochastic 
+- substitutive 
+- restricted 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: DGO
+  year: 2023
+  url: https://dl.acm.org/doi/10.1145/3598469.3598496
+- name: arXiv
+  year: 2023
+  url: https://arxiv.org/abs/2206.13904 

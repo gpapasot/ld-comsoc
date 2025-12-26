@@ -1,0 +1,17 @@
+title: Preserving Consistency for Liquid Knapsack Voting
+authors: Jain, Sornat, Talmon 
+labels:
+- single-stage
+- preferential 
+- single-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- emergent
+- cycles-intolerant
+publications:
+- name: EUMAS
+  url: https://link.springer.com/chapter/10.1007/978-3-031-20614-6_13
+  year: 2022

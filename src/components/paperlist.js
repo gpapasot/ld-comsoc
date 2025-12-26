@@ -23,22 +23,24 @@ import PropTypes from "prop-types";
 const normalizeLabel = (label) => label.toLowerCase().replace(/\s+/g, "-");
 
 const LABEL_COLOR_MAP = {
-  "single-stage": "#0d2c91",
-  "multi-stage": "#0d2c91",
-  "multiple-delegation": "#123fc0",
-  "single-delegation": "#123fc0",
-  preferential: "#1a52e0",
-  epistemic: "#1a52e0",
-  static: "#2b6af1",
-  temporal: "#2b6af1",
-  strategic: "#3b7cff",
-  "non-strategic": "#3b7cff",
-  deterministic: "#5c8cff",
-  stochastic: "#5c8cff",
-  "restricted-delegation": "#7daaff",
-  "unrestricted-delegation": "#7daaff",
-  centralized: "#9bb8ff",
-  emergent: "#9bb8ff",
+  "single-stage": "#f0f0f0",
+  "multi-stage": "#f0f0f0",
+  "multi-proxy": "#f0f0f0",
+  "single-proxy": "#f0f0f0",
+  preferential: "#f0f0f0",
+  epistemic: "#f0f0f0",
+  static: "#f0f0f0",
+  dynamic: "#f0f0f0",
+  strategic: "#f0f0f0",
+  "non-strategic": "#f0f0f0",
+  deterministic: "#f0f0f0",
+  stochastic: "#f0f0f0",
+  "restricted": "#f0f0f0",
+  "unconstrained": "#f0f0f0",
+  centralized: "#f0f0f0",
+  emergent: "#f0f0f0",
+  "cycles-tolerant": "#f0f0f0",
+  "cycles-intolerant": "#f0f0f0",
   publications: "#4caf50", // green background for publications
   arxiv: "#4caf50",        // used for border/font only
 };
@@ -49,7 +51,20 @@ const LABEL_COLOR_MAP = {
 const labelChip = (label, deleteable, selLabels, setSelLabels, type = "label", url = null) => {
   const isArxiv = type === "arxiv";
   const isPublication = type === "publication";
-  const clickable = url != null;
+  const clickable = url != null || type === "label"; // allow label clicks too
+
+  const handleClick = () => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      // toggle label selection for filtering
+      if (selLabels.includes(label)) {
+        setSelLabels(selLabels.filter((l) => l !== label));
+      } else {
+        setSelLabels([...selLabels, label]);
+      }
+    }
+  };
 
   return (
     <Chip
@@ -58,12 +73,16 @@ const labelChip = (label, deleteable, selLabels, setSelLabels, type = "label", u
       label={label}
       variant={isArxiv ? "outlined" : "filled"}
       sx={{
-        bgcolor: isArxiv ? "#ffffff" : isPublication ? LABEL_COLOR_MAP["publications"] : LABEL_COLOR_MAP[normalizeLabel(label)],
-        color: isArxiv ? "#4caf50" : "white",
+        bgcolor: isArxiv
+          ? "#ffffff"
+          : isPublication
+          ? LABEL_COLOR_MAP["publications"]
+          : LABEL_COLOR_MAP[normalizeLabel(label)],
+        color: isArxiv ? "#4caf50" : "black",
         borderColor: isArxiv ? "#4caf50" : undefined,
         cursor: clickable ? "pointer" : "default",
       }}
-      onClick={() => clickable && window.open(url, "_blank", "noopener,noreferrer")}
+      onClick={handleClick}
       onDelete={
         deleteable && selLabels.includes(label)
           ? () => setSelLabels(selLabels.filter((l) => l !== label))
@@ -148,13 +167,15 @@ const PaperList = ({ data }) => {
     // preserve desired order
     const order = [
       "single-stage","multi-stage",
-      "single-delegation","multiple-delegation",
       "epistemic","preferential",
-      "static","temporal",
-      "strategic","non-strategic",
+      "single-proxy","multi-proxy",
       "deterministic","stochastic",
-      "restricted-delegation","unrestricted-delegation",
-      "centralized","emergent"
+      "substitutive","complementary",
+      "restricted","unconstrained",
+      "strategic","non-strategic",
+      "static","dynamic",
+      "centralized","emergent",
+      "cycles-tolerant","cycles-intolerant"
     ];
     return order.indexOf(normalizeLabel(a)) - order.indexOf(normalizeLabel(b));
   });
@@ -170,14 +191,16 @@ const PaperList = ({ data }) => {
     const labels = "labels" in paper ? paper.labels : [];
     labels.sort((a,b)=>{
       const order = [
-        "single-stage","multi-stage",
-        "single-delegation","multiple-delegation",
-        "epistemic","preferential",
-        "static","temporal",
-        "strategic","non-strategic",
-        "deterministic","stochastic",
-        "restricted-delegation","unrestricted-delegation",
-        "centralized","emergent"
+      "single-stage","multi-stage",
+      "epistemic","preferential",
+      "single-proxy","multi-proxy",
+      "deterministic","stochastic",
+      "substitutive","complementary",
+      "restricted","unconstrained",
+      "strategic","non-strategic",
+      "static","dynamic",
+      "centralized","emergent",
+"cycles-tolerant","cycles-intolerant"
       ];
       return order.indexOf(normalizeLabel(a)) - order.indexOf(normalizeLabel(b));
     });
@@ -188,8 +211,10 @@ const PaperList = ({ data }) => {
     paper.publications.forEach((pub) => {
       const name = "displayName" in pub ? pub.displayName : pub.name;
       const text = name + " '" + pub.year.toString().slice(-2);
-      const type = name.toLowerCase() === "arxiv" ? "arxiv" : "publication";
-      chips.push(
+const type =
+  ["arxiv", "pers. repo.", "iacr"].includes(name.toLowerCase())
+    ? "arxiv"
+    : "publication";      chips.push(
         labelChip(text, false, selLabels, setSelLabels, type, pub.url)
       );
     });
@@ -300,8 +325,15 @@ const PaperList = ({ data }) => {
         <List dense="true">{items}</List>
         <Box sx={{ display: "flex" }}>
           <Divider orientation={"vertical"} flexItem />
-          <Stack flexWrap={"wrap"} width={200} pl={1} pt={1} spacing={1} direction="column">
-            {distinctLabels.map((l) => labelChip(l, true, selLabels, setSelLabels))}
+          <Stack flexWrap={"wrap"} width={300} pl={1} pt={1} spacing={1} direction="column">
+            {distinctLabels.map((l, i) => (
+              <React.Fragment key={l}>
+                {labelChip(l, true, selLabels, setSelLabels)}
+                {(i + 1) % 2 === 0 && (
+                  <Divider sx={{ borderColor: "#bbb", borderWidth: "1.2px", my: 1.2 }} />
+                )}
+              </React.Fragment>
+            ))}
           </Stack>
         </Box>
       </Stack>

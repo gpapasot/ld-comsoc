@@ -1,0 +1,20 @@
+title: "Pirates in Wonderland: Liquid Democracy has Bicriteria Guarantees"
+authors: Noel, Suzuki, Vetta
+labels:
+- single-stage 
+- preferential 
+- single-proxy 
+- stochastic 
+- substitutive 
+- unconstrained 
+- strategic 
+- dynamic 
+- emergent
+- cycles-tolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2105.05142
+  year: 2021
+- name: SAGT
+  url: https://link.springer.com/chapter/10.1007/978-3-030-85947-3_26
+  year: 2021

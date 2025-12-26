@@ -1,0 +1,17 @@
+title: Who won? Winner Determination and Robustness in Liquid Democracy
+authors: Bentert, Boehmer, Rymar, Tannenberg
+labels:
+- multi-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2205.05482
+  year: 2022

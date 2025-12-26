@@ -1,0 +1,20 @@
+title: "As Time Goes By: Adding a Temporal Dimension to Resolve Delegations in Liquid Democracy"
+authors: Markakis, Papasotiropoulos
+labels:
+- single-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- dynamic 
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2307.12898
+  year: 2023
+- name: ADT
+  url: https://link.springer.com/chapter/10.1007/978-3-031-73903-3_4
+  year: 2024

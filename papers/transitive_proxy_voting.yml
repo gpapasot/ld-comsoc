@@ -1,0 +1,20 @@
+title: Proxy Selection in Transitive Proxy Voting
+authors: Harding
+labels:
+- multi-stage 
+- preferential 
+- single-proxy 
+- deterministic 
+- complementary
+- restricted 
+- strategic 
+- static 
+- emergent
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2307.02627
+  year: 2023
+- name: Social Choice and Welfare
+  url: research.rug.nl/files/202200570/2021_Book_AlgorithmicDecisionTheory.pdf#page=148
+  year: 2021

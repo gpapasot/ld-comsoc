@@ -1,14 +1,16 @@
 title: The Fluid Mechanics of Liquid Democracy
 authors: Gölz, Kahng, Mackenzie, Procaccia
 labels:
-- single-stage
-- multiple-delegation
-- preferential
-- static
-- non-strategic	
-- deterministic	
-- unrestricted-delegation
+- single-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
 - centralized
+- cycles-intolerant
 publications:
 - name: arXiv
   url: https://arxiv.org/abs/1808.01906

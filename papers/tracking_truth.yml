@@ -1,0 +1,20 @@
+title: "Tracking Truth with Liquid Democracy"
+authors: Berinsky, Halpern, Halpern, Jadbabaie, Mossel, Procaccia, Revel 
+labels:
+- multi-stage 
+- epistemic 
+- single-proxy 
+- stochastic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- emergent
+- cycles-tolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2107.11868
+  year: 2024
+- name: Management Science
+  url: https://pubsonline.informs.org/doi/10.1287/mnsc.2023.02470
+  year: 2025

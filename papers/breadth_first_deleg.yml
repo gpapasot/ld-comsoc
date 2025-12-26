@@ -1,0 +1,17 @@
+title: Incentivising Participation in Liquid Democracy with Breadth-First Delegation
+authors: Kotsialou, Riley
+labels:
+- multi-stage
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: AAMAS
+  url: https://www.ifaamas.org/Proceedings/aamas2020/pdfs/p638.pdf
+  year: 2020

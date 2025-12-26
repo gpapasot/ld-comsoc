@@ -1,0 +1,20 @@
+title: When is Liquid Democracy Possible? On the Manipulation of Variance
+authors: Chatterjee, Gilbert, Schmid, Svoboda, Yeo 
+labels:
+- single-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- restricted 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: IACR
+  url: https://eprint.iacr.org/2025/745
+  year: 2025
+- name: PODC
+  url: https://dl.acm.org/doi/10.1145/3732772.3733544
+  year: 2025

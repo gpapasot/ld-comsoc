@@ -1,0 +1,17 @@
+title: Smart Voting
+authors: Colley, Grandi, Novaro
+labels:
+- multi-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- complementary 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: IJCAI
+  url: https://www.ijcai.org/proceedings/2020/240
+  year: 2020

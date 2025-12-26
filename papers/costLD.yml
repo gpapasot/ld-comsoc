@@ -1,0 +1,20 @@
+title: "The Cost Perspective of Liquid Democracy: Feasibility and Control"
+authors: Alouf-Heffetz, Janeczko, Lisowski, Papasotiropoulos
+labels:
+- single-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- complementary 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2502.02380
+  year: 2025
+- name: AAAI
+  url: https://ojs.aaai.org/index.php/AAAI/article/view/33478
+  year: 2025

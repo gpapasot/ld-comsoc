@@ -9,7 +9,7 @@ import data from "../../papers.json";
 
 const IndexPage = () => {
   React.useEffect(() => {
-    document.title = "Liquid Democracy | COMSOC";
+    document.title = "Liquid Democracy Research";
   }, []);
 
   return (

@@ -1,0 +1,17 @@
+title: An Approval-Based Model for Single-Step Liquid Democracy
+authors: Markakis, Papasotiropoulos 
+labels:
+- single-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: SAGT
+  year: 2021
+  url: https://link.springer.com/chapter/10.1007/978-3-030-85947-3_24

@@ -8,7 +8,7 @@ const Footer = () => {
         // <footer style={{position: 'sticky'}}> 
         //     <AppBar color="primary">
         //         <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center', flexDirection: 'row'}}>
-        //             This page is a fork of~ <a href="https://algorithms-with-predictions.github.io/" style={{color: '#40A840'}}> algorithms-with-predictions.github.io</a>.
+        //             A Community-Maintained Survey    ·    © 2025 Liquid Democracy in Social Choice</a>.
         //         </div>
         //     </AppBar>
         // </footer>
@@ -22,7 +22,7 @@ const Footer = () => {
                 flexShrink: 0
             }}>
             <Typography gutterBottom align="center">
-            This page is a fork of <a href="https://algorithms-with-predictions.github.io/" style={{color: amber[600]}}> algorithms-with-predictions.github.io</a>.
+            A Community-Maintained Survey    ·    © 2025 Liquid Democracy in Social Choice
             </Typography>
             
         </Box>

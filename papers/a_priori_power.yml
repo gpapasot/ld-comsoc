@@ -1,0 +1,20 @@
+title: Measuring a Priori Voting Power in Liquid Democracy
+authors: Colley, Delemazure, Gilbert
+labels:
+- multi-stage 
+- preferential 
+- single-proxy 
+- stochastic 
+- substitutive 
+- restricted 
+- non-strategic 
+- static 
+- emergent
+- cycles-tolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2301.02462
+  year: 2023
+- name: IJCAI
+  url: https://www.ijcai.org/proceedings/2023/290
+  year: 2023

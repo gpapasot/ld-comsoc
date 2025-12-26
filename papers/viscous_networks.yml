@@ -1,0 +1,17 @@
+title: Voting in Social Networks
+authors: Boldi, Bonchi, Castillo, Vigna
+labels:
+- multi-stage
+- preferential 
+- single-proxy 
+- deterministic 
+- substitutive 
+- restricted 
+- non-strategic 
+- static 
+- emergent
+- cycles-tolerant
+publications:
+- name: CIKM
+  url: https://dl.acm.org/doi/pdf/10.1145/1645953.1646052?casa_token=9T-oVVavhR0AAAAA:awTDLJenNQh6YphsVktG1mjgEream_O-rgKckrn1TPgjVM2G14ulJKEGtQ6T_mbrRc5hxSwpM6s
+  year: 2009

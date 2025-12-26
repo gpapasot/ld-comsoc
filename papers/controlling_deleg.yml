@@ -1,0 +1,20 @@
+title: Controlling Delegations in Liquid Democracy
+authors: Alouf-Heffetz, Inamdar, Jain, More, Talmon
+labels:
+- multi-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static 
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2403.07558
+  year: 2024
+- name: AAMAS
+  url: https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p2624.pdf
+  year: 2024

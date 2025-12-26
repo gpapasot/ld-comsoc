@@ -1,8 +1,8 @@
 module.exports = {
-  pathPrefix: `/sat-for-math`,
+  pathPrefix: `/ld-research`,
   siteMetadata: {
-    title: `LD in COMSOC`,
-    siteUrl: `https://sat4math.com`
+    title: `LD Research`,
+    siteUrl: `https://dummy.com`
   },
   plugins: [
     `gatsby-plugin-emotion`, 

@@ -1,0 +1,20 @@
+title: On Parameterized Complexity of Liquid Democracy
+authors: Dey, Maiti, Sharma
+labels:
+- single-stage 
+- preferential 
+- multi-proxy 
+- deterministic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static
+- centralized
+- cycles-intolerant
+publications:
+- name: arXiv
+  url: https://arxiv.org/abs/2011.14192
+  year: 2020
+- name: CALDAM
+  url: https://link.springer.com/chapter/10.1007/978-3-030-67899-9_7
+  year: 2021
