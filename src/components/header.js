@@ -22,7 +22,7 @@ const Header = () => (
           sx={{ mr: 1 }}
           color="inherit"
           component={Link}
-          to={withPrefix(page.href)} // wrap with withPrefix
+          to={withPrefix(page.href)}  // <--- add withPrefix here
         >
           {page.name}
         </Button>
