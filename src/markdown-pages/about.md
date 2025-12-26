@@ -35,9 +35,9 @@ G. Papasotiropoulos was supported by the European Union (ERC, [PRO-DEMOCRATIC](h
 
 
 <div style="position: relative; display: inline-block;">
-  <img src="../../static/erceu.png" alt="ERCEU" width="150" />
+  <img src="../../../static/erceu.png" alt="ERCEU" width="150" />
   <img
-    src="../../static/eu_funded.jpg"
+    src="../../../static/eu_funded.jpg"
     alt="EU funded"
     width="150"
     style="position: absolute; top: 18px; left: 190px;"
