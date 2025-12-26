@@ -19,6 +19,5 @@ jobs:
       - name: Gatsby Publish
         uses: enriikke/gatsby-gh-pages-action@v2.2.0
         with:
-          access-token: ${{ secrets.DEPLOY }}
-          deploy-branch: deploy
-          skip-publish: false
+          access-token: ${{ secrets.GH_PAT }}
+          branch: gh-pages
