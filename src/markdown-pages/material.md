@@ -1,6 +1,6 @@
 ---
 title: "Further Material"
-slug: "/material"
+slug: "./material"
 ---
 
 ## Reading Material
