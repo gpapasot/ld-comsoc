@@ -1,8 +1,7 @@
 module.exports = {
-  pathPrefix: `/ld-research`,
+  pathPrefix: "/ld-comsoc",
   siteMetadata: {
-    title: `LD Research`,
-    siteUrl: `https://dummy.com`
+    title: "LD Comsoc",
   },
   plugins: [
     `gatsby-plugin-emotion`, 
