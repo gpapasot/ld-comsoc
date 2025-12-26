@@ -10,6 +10,7 @@ const pages = [
   { name: "About", href: "/about" },
 ];
 
+
 const Header = () => (
   <AppBar position="static" color="primary">
     <Toolbar disableGutters>
