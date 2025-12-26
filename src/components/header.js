@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import Button from "@mui/material/Button";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,7 +9,6 @@ const pages = [
   { name: "Further Material", href: "/material" },
   { name: "About", href: "/about" },
 ];
-
 
 const Header = () => (
   <AppBar position="static" color="primary">
@@ -23,7 +22,7 @@ const Header = () => (
           sx={{ mr: 1 }}
           color="inherit"
           component={Link}
-          to={page.href}  // relative href; Gatsby applies pathPrefix automatically
+          to={withPrefix(page.href)} // wrap with withPrefix
         >
           {page.name}
         </Button>
