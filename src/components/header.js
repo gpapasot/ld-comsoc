@@ -22,7 +22,7 @@ const Header = () => (
           sx={{ mr: 1 }}
           color="inherit"
           component={Link}
-          to={page.href)  
+          to={page.href}  
         >
           {page.name}
         </Button>
