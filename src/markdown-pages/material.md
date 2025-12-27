@@ -1,6 +1,6 @@
 ---
 title: "Further Material"
-slug: "/ld-comsoc/material"
+slug: "/material"
 ---
 
 ## Reading Material
