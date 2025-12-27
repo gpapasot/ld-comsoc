@@ -33,6 +33,20 @@ D. Grossi acknowledges support by the European Union under the Horizon Europe pr
 G. Papasotiropoulos was supported by the European Union (ERC, [PRO-DEMOCRATIC](https://duch.mimuw.edu.pl/~ps219737/projects/pro-democratic/), 101076570). Views and opinions expressed are however those of the authors only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them.</span>
 
 
-![ERCEU](/ld-comsoc/erceu.png)
-![EU funded](/ld-comsoc/eu_funded.jpg)
+
+
+
+<img 
+  src="/ld-comsoc/erceu.png" 
+  alt="ERCEU" 
+  width="150" 
+  style="margin-right: 40px;" 
+/>
+
+<img 
+  src="/ld-comsoc/eu_funded.jpg" 
+  alt="EU funded" 
+  width="150" 
+  style="vertical-align: 20px;" 
+/>
 
