@@ -1,6 +1,6 @@
 ---
 title: "About"
-slug: "/ld-comsoc/about"
+slug: "/about"
 ---
 
 ## About
