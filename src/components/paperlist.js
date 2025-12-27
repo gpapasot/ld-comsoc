@@ -334,6 +334,21 @@ const type =
                 )}
               </React.Fragment>
             ))}
+<Typography 
+              variant="caption" 
+              display="block" 
+              sx={{ textAlign: 'right', mt: 2, color: 'text.secondary' }}
+            >
+              What are these labels? - {' '}
+              <Link 
+                to="/about" 
+                style={{ color: '#1976d2', textDecoration: 'underline' }}
+              >
+                check here
+              </Link>
+            </Typography>
+
+                  
           </Stack>
         </Box>
       </Stack>
