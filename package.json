@@ -1,9 +1,9 @@
 {
-  "name": "sat-for-math",
+  "name": "ld-comsoc",
   "version": "1.0.0",
   "private": true,
-  "description": "sat-for-math",
-  "author": "Bernardo Subercaseaux",
+  "description": "liquid democracy research within social choice",
+  "author": "Giorgos Papasotiropoulos",
 "homepage": "https://gpapasot.github.io/ld-comsoc",
   "keywords": [
     "gatsby"
