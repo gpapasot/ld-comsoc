@@ -16,6 +16,7 @@ import {
 import * as React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import { Link } from "gatsby";
 
 // -----------------------------
 // Label colors
