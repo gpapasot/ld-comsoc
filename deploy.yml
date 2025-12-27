@@ -21,10 +21,13 @@ jobs:
         run: yarn install
 
       - name: Build Gatsby site
+        # This is the magic command that fixes the /about redirect
         run: yarn build --prefix-paths
 
       - name: Deploy to GitHub Pages
         uses: enriikke/gatsby-gh-pages-action@v2.2.0
         with:
           access-token: ${{ secrets.GH_PAT }}
-          branch: gh-pages
+          deploy-branch: gh-pages
+          # Use the build we just made, don't let the action build it again
+          skip-build: true
