@@ -10,15 +10,25 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - name: Compose Data
-        run: yarn && node scripts/composeData.js
+          
+      - name: Install and Compose Data
+        run: |
+          yarn install
+          node scripts/composeData.js
+          
       - name: Build Gatsby
+        # This creates the "public" folder with the correct subfolder links
         run: yarn build --prefix-paths
+        
       - name: Gatsby Publish
         uses: enriikke/gatsby-gh-pages-action@v2.2.0
         with:
-          access-token: ${{ secrets.GH_PAT }}
+          # Use the built-in token so you don't have to manage secrets
+          access-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-branch: gh-pages
+          # IMPORTANT: Tell the action to use the "public" folder we just built
+          skip-build: true
