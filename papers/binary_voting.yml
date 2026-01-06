@@ -1,16 +1,16 @@
 title: Binary Voting with Delegable Proxy: An Analysis of Liquid Democracy
 authors: Christoff, Grossi 
 labels:
--multi-stage
--preferential
--single-proxy
--deterministic
--substitutive
--constrained 
--non-strategic
--static
--decentralized
--cycles-tolerant
+- multi-stage
+- preferential
+- single-proxy
+- deterministic
+- substitutive
+- constrained 
+- non-strategic
+- static
+- decentralized
+- cycles-tolerant
 publications:
 - name: arXiv
   url: https://arxiv.org/abs/1707.08741
