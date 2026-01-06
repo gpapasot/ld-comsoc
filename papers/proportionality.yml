@@ -6,10 +6,10 @@ labels:
 - multi-proxy 
 - deterministic 
 - complementary 
-- restricted 
+- constrained 
 - non-strategic 
 - static 
-- emergent
+- decentralized
 - cycles-intolerant
 publications:
 - name: ESSLLI
