@@ -6,7 +6,7 @@ labels:
 - multi-proxy 
 - deterministic 
 - substitutive 
-- restricted 
+- constrained 
 - non-strategic 
 - static 
 - centralized
