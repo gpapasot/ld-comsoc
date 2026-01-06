@@ -6,7 +6,7 @@ labels:
 - single-proxy 
 - stochastic 
 - substitutive 
-- restricted 
+- constrained 
 - non-strategic 
 - static 
 - centralized
