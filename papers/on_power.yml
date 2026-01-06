@@ -1,0 +1,17 @@
+title: Power in Liquid Democracy
+authors: Zhang, Grossi
+labels:
+- multi-stage
+- preferential
+- single-proxy
+- deterministic
+- substitutive
+- unconstrained
+- non-strategic 
+- static
+- decentralized
+- cycles-tolerant
+publications:
+- name: AAAI
+  url: https://cdn.aaai.org/ojs/16729/16729-13-20223-1-2-20210518.pdf
+  year: 2021

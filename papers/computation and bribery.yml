@@ -1,0 +1,20 @@
+title: Computation and Bribery of Voting Power in Delegative Simple Games
+authors: D'Angelo, Delfaraz, Gilbert
+labels:
+- multi-stage
+- preferential
+- single-proxy
+- deterministic
+- substitutive
+- unconstrained
+- non-strategic
+- static
+- decentralized
+- cycles-tolerant
+publications:
+- name: AAMAS
+  url: https://www.ifaamas.org/Proceedings/aamas2022/pdfs/p336.pdf
+  year: 2022
+- name: arxiv
+  url: https://arxiv.org/abs/2104.03692
+  year: 2022

@@ -1,0 +1,20 @@
+title: Tracking Truth by Weighting Proxies in Liquid Democracy
+authors: Zhang, Grossi
+labels:
+- multi-stage 
+- epistemic
+- multi-proxy 
+- stochastic 
+- substitutive 
+- unconstrained 
+- non-strategic 
+- static
+- decentralized
+- cycles-tolerant
+publications:
+- name: AAMAS
+  url: https://www.ifaamas.org/Proceedings/aamas2022/pdfs/p1482.pdf
+  year: 2022
+- name: arxiv
+  url: https://arxiv.org/abs/2103.09081
+  year: 2021
