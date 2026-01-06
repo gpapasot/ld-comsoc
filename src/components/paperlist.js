@@ -36,10 +36,10 @@ const LABEL_COLOR_MAP = {
   "non-strategic": "#f0f0f0",
   deterministic: "#f0f0f0",
   stochastic: "#f0f0f0",
-  "restricted": "#f0f0f0",
+  "constrained": "#f0f0f0",
   "unconstrained": "#f0f0f0",
   centralized: "#f0f0f0",
-  emergent: "#f0f0f0",
+  decentralized: "#f0f0f0",
   "cycles-tolerant": "#f0f0f0",
   "cycles-intolerant": "#f0f0f0",
   publications: "#4caf50", // green background for publications
@@ -172,10 +172,10 @@ const PaperList = ({ data }) => {
       "single-proxy","multi-proxy",
       "deterministic","stochastic",
       "substitutive","complementary",
-      "restricted","unconstrained",
+      "constrained","unconstrained",
       "strategic","non-strategic",
       "static","dynamic",
-      "centralized","emergent",
+      "centralized","decentralized",
       "cycles-tolerant","cycles-intolerant"
     ];
     return order.indexOf(normalizeLabel(a)) - order.indexOf(normalizeLabel(b));
@@ -197,10 +197,10 @@ const PaperList = ({ data }) => {
       "single-proxy","multi-proxy",
       "deterministic","stochastic",
       "substitutive","complementary",
-      "restricted","unconstrained",
+      "constrained","unconstrained",
       "strategic","non-strategic",
       "static","dynamic",
-      "centralized","emergent",
+      "centralized","decentralized",
 "cycles-tolerant","cycles-intolerant"
       ];
       return order.indexOf(normalizeLabel(a)) - order.indexOf(normalizeLabel(b));
