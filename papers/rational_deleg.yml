@@ -9,9 +9,9 @@ labels:
 - unconstrained
 - strategic
 - static
-- decentalized
+- decentralized
 - cycles-tolerant
 publications:
-- name: arxiv
+- name: arXiv
   url: https://arxiv.org/abs/1802.08020
   year: 2018
