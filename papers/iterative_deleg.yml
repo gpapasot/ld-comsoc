@@ -6,10 +6,10 @@ labels:
 - multi-proxy 
 - deterministic 
 - substitutive 
-- restricted 
+- constrained 
 - strategic 
 - dynamic 
-- emergent
+- decentralized
 - cycles-intolerant
 publications:
 - name: arXiv
