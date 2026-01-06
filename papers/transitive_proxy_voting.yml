@@ -6,10 +6,10 @@ labels:
 - single-proxy 
 - deterministic 
 - complementary
-- restricted 
+- constrained 
 - strategic 
 - static 
-- emergent
+- decentralized
 - cycles-intolerant
 publications:
 - name: arXiv
