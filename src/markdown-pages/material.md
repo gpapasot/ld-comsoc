@@ -10,7 +10,7 @@ slug: "/material"
   
 
 - **A short guide to different research directions and approaches in the field for newcomers. [Liquid Democracy: An Annotated Reading List](https://www.sigecom.org/exchanges/volume_22/2/PAPASOTIROPOULOS.pdf)**  
-  <span style="color:#555555">— G. Papasotiropoulos, U. Schmidt-Kraeplin</span>  
+  <span style="color:#555555">— G. Papasotiropoulos, U. Schmidt-Kraepelin</span>  
 
 - **An outreach and discussion journal on liquid democracy, covering approaches, perspectives, proposals, case studies, and reflections on practice and theory. [The Liquid Democracy Journal](https://liquid-democracy-journal.org)**  
 
