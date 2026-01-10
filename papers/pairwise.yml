@@ -3,13 +3,13 @@ authors: Brill, Talmon
 labels:
 - single-stage 
 - preferential 
-- single-proxy 
+- multi-proxy 
 - deterministic 
-- substitutive 
+- complementary 
 - unconstrained 
 - non-strategic 
 - static 
-- decentralized
+- centralized
 - cycles-intolerant
 publications:
 - name: IJCAI
