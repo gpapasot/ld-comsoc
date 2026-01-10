@@ -9,7 +9,7 @@ labels:
 - constrained 
 - non-strategic 
 - static 
-- centralized
+- decentralized
 - cycles-intolerant
 publications:
 - name: JAIR
