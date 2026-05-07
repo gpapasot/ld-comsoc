@@ -12,6 +12,8 @@ labels:
 - decentralized
 - cycles-tolerant
 publications:
+- name: IJCAI
+  year: 2026
 - name: pers. repo.
   url: https://duch.mimuw.edu.pl/~gpapasotiropoulos/Long_term_delegations_in_Liquid_Democracy.pdf
   year: 2025
