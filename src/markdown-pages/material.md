@@ -5,7 +5,7 @@ slug: "/material"
 
 ## Reading Material
 
-- **The Companion Paper of this project. [Liquid Democracy in Social Choice: Reflections on the Past, Proposals for the Future](https://www.sigecom.org/exchanges/volume_22/2/PAPASOTIROPOULOS.pdf)**  
+- **The Companion Paper of this project. [Liquid Democracy in Social Choice: Reflections on the Past, Proposals for the Future](https://gpapasot.github.io/ld-comsoc/paper.pdf)**  
   <span style="color:#555555">— D. Grossi, A. Nitsche, G. Papasotiropoulos</span>
   
 
